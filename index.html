@@ -1,205 +1,746 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- =====BOX ICONS===== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Sumti Gupta's Portfolio</title>
+  </head>
+  <body>
+    <!--===== HEADER =====-->
+    <!-- Include Boxicons CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/boxicons/2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-        <title>Portfolio website complete</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Marlon</a>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+      <nav class="nav bd-grid">
+        <div>
+          <a href="#home" class="nav__logo" class="name_h">Sumit</a>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link"
+                ><i class="bx bxs-home"></i> Home</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link"
+                ><i class="bx bxs-user"></i> About</a
+              >
+            </li>
+
+            <li class="nav__item">
+              <a href="#education" class="nav__link"
+                ><i class="bx bxs-graduation"></i> Education</a
+              >
+            </li>
+
+            <li class="nav__item">
+              <a href="#skills" class="nav__link"
+                ><i class="bx bxs-cog"></i> Skills</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#work" class="nav__link"
+                ><i class="bx bxs-briefcase"></i> Work/Project</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link"
+                ><i class="bx bxs-envelope"></i> Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="bx bx-moon" id="moon"></div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main class="l-main">
+      <!--===== HOME =====-->
+      <section class="home bd-grid" id="home">
+        <div class="home__data">
+          <h1 class="home__title">
+            Hi,<br />I'am <span class="home__title-color">Sumit Gupta</span
+            ><br />
+            Software Developer
+          </h1>
+
+          <a href="assets\img\Sumit Resume.pdf" class="button">Resume</a>
+        </div>
+
+        <div class="home__social">
+          <a
+            href="https://www.linkedin.com/in/sumit-gupta-00b08b252/"
+            class="home__social-icon"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <!-- <a href="" class="home__social-icon"
+            ><i class="bx bxl-behance"></i
+          ></a>-->
+          <a href="" class="home__social-icon"><i class="bx bxl-github"></i></a>
+        </div>
+
+        <div class="home__img">
+          <svg
+            class="home__blob"
+            viewBox="0 0 479 467"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <mask id="mask0" mask-type="alpha">
+              <path
+                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
+              />
+            </mask>
+            <g mask="url(#mask0)">
+              <path
+                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
+              />
+              <image
+                class="home__blob-img"
+                x="50"
+                y="70"
+                href="assets\img\image-removebg-preview.png"
+              />
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <!--===== ABOUT =====-->
+      <section class="about section" id="about">
+        <h2 class="section-title">About</h2>
+
+        <div class="about__container bd-grid">
+          <div class="about__img">
+            <img src="assets\img\sumit_madhuram.jpg" alt="" />
+          </div>
+
+          <div>
+            <h2 class="platform__subtitle">I'am Sumit Gupta</h2>
+            <p class="about__text">
+              As a third-year engineering student, I'm passionate about Flutter
+              app development and proficient in WordPress website building. With
+              a strong foundation in HTML, CSS, and JavaScript, I'm
+              detail-oriented and self-motivated, eager to apply my skills to
+              real-world projects and collaborate to solve complex problems.
+            </p>
+            <!-- platform -->
+            <section class="platforms-section">
+              <h2 class="platform__subtitle">Platform's Handles</h2>
+              <div class="platforms">
+                <div class="platform">
+                  <a href="https://leetcode.com/sumit_gupta01/" target="_blank">
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/leetcode.svg"
+                      alt="LeetCode"
+                    />
+                  </a>
+                </div>
+                <div class="platform">
+                  <a href="#" target="_blank">
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg"
+                      alt="GitHub"
+                    />
+                  </a>
+                </div>
+                <div class="platform">
+                  <a
+                    href="https://auth.geeksforgeeks.org/user/sumitkumaruvcd"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/geeksforgeeks.svg"
+                      alt="GeeksforGeeks"
+                    />
+                  </a>
                 </div>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
+                <div class="platform">
+                  <a
+                    href="https://www.hackerrank.com/profile/sk94601"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/hackerrank.svg"
+                      alt="HackerRank"
+                    />
+                  </a>
                 </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
+                <div class="platform">
+                  <a
+                    href="https://www.linkedin.com/in/sumit-gupta-00b08b252/"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"
+                      alt="LinkedIn"
+                    />
+                  </a>
                 </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Marlon</span><br> Web Designer</h1>
-
-                    <a href="#" class="button">Contact</a>
-                </div>
-
-                <div class="home__social">
-                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
-
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/>
-                        </g>
-                    </svg>
-                </div>
+              </div>
             </section>
+          </div>
+        </div>
+      </section>
 
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+      <!-- education -->
+      <section id="education">
+        <h2 class="section-title" id="education">Education</h2>
+        <section class="education-section">
+          <div class="education-box">
+            <i class="bx bxs-graduation"></i>
+            <h2 class="degree-name">
+              Bachelor of Engineering <br />
+              in <br />Computer Science and Engineering
+            </h2>
+            <h3 class="college-name">
+              Sant Longowal Institute of Engineering and Technology (SLIET)
+            </h3>
+            <span class="grade">9.08/10 CGPA</span>
+            <p>Aug. 2022 – Present</p>
+          </div>
+          <div class="education-box">
+            <i class="bx bxs-book-reader"></i>
+            <h2 class="degree-name">
+              Integrated Certificate Diploma <br />
+              in <br />
+              Electronics and Communication
+            </h2>
+            <h3 class="college-name">
+              Sant Longowal Institute of Engineering and Technology (SLIET)
+            </h3>
+            <span class="grade">9.81/10 CGPA</span>
+            <p>July 2019 – June 2022</p>
+          </div>
+          <div class="education-box">
+            <i class="bx bxs-building-house"></i>
+            <h2 class="degree-name">
+              Secondary School - 10th <br />
+              CBSE
+            </h2>
+            <h3 class="college-name">Saraswati Vidya Mandir Munger, Bihar</h3>
+            <span class="grade">94.1%</span>
+            <p>May 2018 – June 2019</p>
+          </div>
+        </section>
+      </section>
 
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am Marlon</h2>
-                        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>           
-                    </div>                                   
-                </div>
-            </section>
+      <!--===== SKILLS =====-->
+      <section class="skills section" id="skills">
+        <h2 class="section-title">Skills</h2>
 
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
-
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
-
-                <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </a>
-                </div>
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Marlon</p>
-            <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+        <div class="skills__container bd-grid">
+          <div>
+            <h2 class="skills__subtitle">Application Development</h2>
+            <!--<p class="skills__text">Lorem ipsum</p>-->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-flutter skills__icon"></i>
+                <span class="skills__name">Flutter</span>
+              </div>
+              <div class="skills__bar skills__html"></div>
+              <div>
+                <span class="skills__percentage">95%</span>
+              </div>
             </div>
-            <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
-        </footer>
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bx-code-curly skills__icon"></i>
+                <span class="skills__name">Dart</span>
+              </div>
+              <div class="skills__bar skills__css"></div>
+              <div>
+                <span class="skills__percentage">85%</span>
+              </div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-firebase skills__icon"></i>
+                <span class="skills__name">Firebase</span>
+              </div>
+              <div class="skills__bar skills__js"></div>
+              <div>
+                <span class="skills__percentage">65%</span>
+              </div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-android skills__icon"></i>
+                <span class="skills__name">Android Studio</span>
+              </div>
+              <div class="skills__bar skills__ux"></div>
+              <div>
+                <span class="skills__percentage">85%</span>
+              </div>
+            </div>
+          </div>
 
+          <div>
+            <h2 class="skills__subtitle">Website Development</h2>
+            <!--<p class="skills__text">Lorem ipsum</p>-->
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-html5 skills__icon"></i>
+                <span class="skills__name">HTML5</span>
+              </div>
+              <div class="skills__bar skills__html"></div>
+              <div>
+                <span class="skills__percentage">95%</span>
+              </div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-css3 skills__icon"></i>
+                <span class="skills__name">CSS</span>
+              </div>
+              <div class="skills__bar skills__css"></div>
+              <div>
+                <span class="skills__percentage">85%</span>
+              </div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-javascript skills__icon"></i>
+                <span class="skills__name">JavaScript</span>
+              </div>
+              <div class="skills__bar skills__js"></div>
+              <div>
+                <span class="skills__percentage">65%</span>
+              </div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-wordpress skills__icon"></i>
+                <span class="skills__name">WordPress</span>
+              </div>
+              <div class="skills__bar skills__ux"></div>
+              <div>
+                <span class="skills__percentage">95%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+      <!--===== LANGUAGES & COURSEWORK =====-->
+      <div class="skills__container bd-grid">
+        <div>
+          <h2 class="skills__subtitle">Coursework</h2>
+          <!--<p class="skills__text">Lorem ipsum</p>-->
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bxl-windows skills__icon"></i>
+              <span class="skills__name">Operating System</span>
+            </div>
+            <div class="skills__bar skills__html"></div>
+            <div>
+              <span class="skills__percentage">95%</span>
+            </div>
+          </div>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bxs-data skills__icon"></i>
+              <span class="skills__name">DBMS</span>
+            </div>
+            <div class="skills__bar skills__css"></div>
+            <div>
+              <span class="skills__percentage">85%</span>
+            </div>
+          </div>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bx-signal-5 skills__icon"></i>
+              <span class="skills__name">Computer Networks</span>
+            </div>
+            <div class="skills__bar skills__js"></div>
+            <div>
+              <span class="skills__percentage">65%</span>
+            </div>
+          </div>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bx-code skills__icon"></i>
+              <span class="skills__name">Algorithms and Data Structures</span>
+            </div>
+            <div class="skills__bar skills__ux"></div>
+            <div>
+              <span class="skills__percentage">95%</span>
+            </div>
+          </div>
+        </div>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+        <div>
+          <h2 class="skills__subtitle">Languages</h2>
+          <!--<p class="skills__text">Lorem ipsum</p>-->
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bxl-c-plus-plus skills__icon"></i>
+              <span class="skills__name">C++</span>
+            </div>
+            <div class="skills__bar skills__html"></div>
+            <div>
+              <span class="skills__percentage">95%</span>
+            </div>
+          </div>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bx-code skills__icon"></i>
+              <span class="skills__name">C</span>
+            </div>
+            <div class="skills__bar skills__css"></div>
+            <div>
+              <span class="skills__percentage">85%</span>
+            </div>
+          </div>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bxl-python skills__icon"></i>
+              <span class="skills__name">Python</span>
+            </div>
+            <div class="skills__bar skills__js"></div>
+            <div>
+              <span class="skills__percentage">65%</span>
+            </div>
+          </div>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bxs-data skills__icon"></i>
+              <span class="skills__name">SQL</span>
+            </div>
+            <div class="skills__bar skills__js"></div>
+            <div>
+              <span class="skills__percentage">65%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project -->
+      <section class="work section" id="work">
+        <h2 class="section-title">Project</h2>
+
+        <div class="work__container bd-grid">
+          <div
+            class="work__item"
+            data-description="We created an app that uses AI to help you easily create great content. It uses smart technology to make sure your work is well-organized and relevant."
+            data-tech-stack="Flutter, Dart, ChatGPT API, Firebase"
+            data-live="app2.html"
+            data-source="Source Code Link 1"
+          >
+            <a href="#" class="work__img" onclick="openPopup(event)">
+              <img
+                src="assets\img\Copy of Blue Modern Mobile Application Presentation (1) (1).jpg"
+                alt=""
+              />
+            </a>
+            <p class="work__name">AI Assignment Generator App</p>
+          </div>
+          <!-- Add more work items as needed -->
+          <div
+            class="work__item"
+            data-description=" •Developed a platform-independent E-Commerce application using Flutter, a cross-platform framework.
+        •Enforced Firebase authentication, retained session state, and efficiently managed carts"
+            data-tech-stack="Flutter, Dart, JSON, Firebase"
+            data-live="app1.html"
+            data-source="Source Code Link 1"
+          >
+            <a href="#" class="work__img" onclick="openPopup(event)">
+              <img
+                src="assets\img\Blue Modern Mobile Application Presentation (1).jpg"
+                alt=""
+              />
+            </a>
+            <p class="work__name">Apple's Cart App</p>
+          </div>
+
+          <div
+            class="work__item"
+            data-description="Created personal portfolio website showcasing all my details."
+            data-tech-stack="HTML, CSS, JavaScript"
+            data-live="https://sumitgupta01.netlify.app/"
+            data-source="Source Code Link 1"
+          >
+            <a href="#" class="work__img" onclick="openPopup(event)">
+              <img src="assets\img\Screenshot 2024-04-09 032201.jpg" alt="" />
+            </a>
+            <p class="work__name">My Portfolio</p>
+          </div>
+
+          <div
+            class="work__item"
+            data-description="Designed and developed a responsive website using HTML and CSS, featuring a blog on farming techniques, agricultural innovations, and resources for farmers.            "
+            data-tech-stack="HTML, CSS"
+            data-live="https://660fc32d43fd6975ef697a2c--gentle-medovik-cc9f4c.netlify.app/blog_px4"
+            data-source="Source Code Link 1"
+          >
+            <a href="#" class="work__img" onclick="openPopup(event)">
+              <img src="assets\img\Screenshot 2024-04-05 145643.png" alt="" />
+            </a>
+            <p class="work__name">AgriTech Innovators Blog</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- work -->
+      <h2 class="section-title">Work</h2>
+
+      <div class="work__container bd-grid">
+        <div
+          class="work__item"
+          data-description="• Managed the official website of the Alumni Cell, SLIET.
+            •Implementing Payments Integration, Alumni Directory, Login functionality, Alumni Event Registration, and Airpay Payment Gateway integration.            "
+          data-tech-stack="Wordpress"
+          data-live="https://slietalumni.in/"
+          data-source="Source Code Link 1"
+        >
+          <a href="#" class="work__img" onclick="openPopup(event)">
+            <img src="assets\img\Screenshot 2024-04-05 041224.png" alt="" />
+          </a>
+          <p class="work__name">SLIET Alumni Association Website</p>
+        </div>
+
+        <div
+          class="work__item"
+          data-description="Designed and developed Datsaero.com, handling all aspects of the website creation process."
+          data-tech-stack="Wordpress"
+          data-live="https://datsaero.com/"
+          data-source="Source Code Link 1"
+        >
+          <a href="#" class="work__img" onclick="openPopup(event)">
+            <img src="assets\img\Screenshot 2024-04-05 105218.png" alt="" />
+          </a>
+          <p class="work__name">DATS Aero</p>
+        </div>
+
+        <div
+          class="work__item"
+          data-description="Developed and managed user-friendly website for RKG Consultancy Services, enhancing customer experience and engagement."
+          data-tech-stack="Wordpress"
+          data-live="http://rkgcespl.com/"
+          data-source="Source Code Link 1"
+        >
+          <a href="#" class="work__img" onclick="openPopup(event)">
+            <img src="assets\img\Screenshot 2024-04-09 032525.jpg" alt="" />
+          </a>
+          <p class="work__name">RKG Consultancy Services</p>
+        </div>
+
+        <div
+          class="work__item"
+          data-description="Created the Scholar Consultancy website, facilitating registration for both industries and students. Implemented functionality for students to access projects, job opportunities, and internships."
+          data-tech-stack="Wordpress"
+          data-live="http://www.scholarconsultancy.in/"
+          data-source="Source Code Link 1"
+        >
+          <a href="#" class="work__img" onclick="openPopup(event)">
+            <img src="assets\img\Screenshot 2024-04-05 104349.png" alt="" />
+          </a>
+          <p class="work__name">Scholar Consultancy</p>
+        </div>
+
+        <div
+          class="work__item"
+          data-description="Designed and developed Ansh Atelier's website (anshatelier.in), showcasing the company's interior design services."
+          data-tech-stack="Wordpress"
+          data-live="https://anshatelier.in/"
+          data-source="Source Code Link 1"
+        >
+          <a href="#" class="work__img" onclick="openPopup(event)">
+            <img src="assets\img\Screenshot 2024-04-05 101648.png" alt="" />
+          </a>
+          <p class="work__name">Ansh's Atelier</p>
+        </div>
+
+        <div
+          class="work__item"
+          data-description="Developed and maintained the website for the SLIET Cultural Fest, showcasing event details, registrations, schedules, and highlights to engage participants and attendees."
+          data-tech-stack="Wordpress"
+          data-live="https://madhuramsliet.com/"
+          data-source="Source Code Link 1"
+        >
+          <a href="#" class="work__img" onclick="openPopup(event)">
+            <img
+              src="assets\img\WhatsApp Image 2023-10-13 at 13.04.20_ecd16088 (1).jpeg"
+              alt=""
+            />
+          </a>
+          <p class="work__name">Madhuram(SLIET'S Cultural Fest)</p>
+        </div>
+        <div
+          class="work__item"
+          data-description="Developed and designed the IQAC SLIET website, providing comprehensive information and centralizing document submissions."
+          data-tech-stack="Google Sites"
+          data-live="https://www.sliet.co.in/home"
+          data-source="Source Code Link 1"
+        >
+          <a href="#" class="work__img" onclick="openPopup(event)">
+            <img src="assets\img\Screenshot 2024-04-05 101901.png" alt="" />
+          </a>
+          <p class="work__name">IQAC SLIET</p>
+        </div>
+      </div>
+
+      <div class="popup" id="popup">
+        <div class="popup__content">
+          <span class="popup__close" id="popup__close">&times;</span>
+          <h3 class="popup__title" id="popup__title"></h3>
+          <ul class="popup__list" id="popup__list"></ul>
+          <a href="#" class="popup__button" id="popup__live" target="_self"
+            >Live Link</a
+          >
+          <!--<a href="#" class="popup__button" id="popup__source" target="_blank"
+            >Source Code</a
+          > -->
+          <!--
+            <div class="platforms">
+            <div class="platform">
+              <a href="#" target="_blank">
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/leetcode.svg"
+                  alt="LeetCode"
+                  style="width: 24px; height: 24px"
+                />
+              </a>
+            </div>
+            Add more platform icons as needed 
+          </div>
+            -->
+        </div>
+      </div>
+
+      <script>
+        function openPopup(event) {
+          event.preventDefault();
+          const workItem = event.target.closest(".work__item");
+          const description = workItem.getAttribute("data-description");
+          const liveLink = workItem.getAttribute("data-live");
+          //const sourceCode = workItem.getAttribute("data-source");
+          const techStack = workItem.getAttribute("data-tech-stack");
+
+          const popup = document.getElementById("popup");
+          const popupTitle = document.getElementById("popup__title");
+          const popupList = document.getElementById("popup__list");
+          const liveButton = document.getElementById("popup__live");
+          //const sourceButton = document.getElementById("popup__source");
+
+          popupTitle.innerText = "Description";
+          popupList.innerHTML = "";
+          description.split("|").forEach((point) => {
+            const li = document.createElement("li");
+            li.innerText = point.trim();
+            popupList.appendChild(li);
+          });
+
+          const techStackTitle = document.createElement("h3");
+          techStackTitle.innerText = "Tech Stack:";
+          popupList.appendChild(techStackTitle);
+
+          const techStackLi = document.createElement("li");
+          techStackLi.innerText = techStack;
+          popupList.appendChild(techStackLi);
+
+          liveButton.href = liveLink;
+          //sourceButton.href = sourceCode;
+
+          popup.style.display = "block";
+        }
+
+        document
+          .getElementById("popup__close")
+          .addEventListener("click", function () {
+            document.getElementById("popup").style.display = "none";
+          });
+
+        window.addEventListener("click", function (event) {
+          if (event.target === document.getElementById("popup")) {
+            document.getElementById("popup").style.display = "none";
+          }
+        });
+      </script>
+
+      <!--===== CONTACT =====-->
+      <section class="contact section" id="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact__container bd-grid">
+          <form data-netlify="true">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              class="contact__input"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              class="contact__input"
+            />
+            <textarea
+              name="message"
+              placeholder="Message"
+              class="contact__input"
+            ></textarea>
+            <button type="submit" class="contact__button button">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+      <p class="footer__title">sumit_gupta01</p>
+      <div class="footer__social">
+        <a
+          href="https://www.linkedin.com/in/sumit-gupta-00b08b252/"
+          class="footer__icon"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+        <a href="mailto:sumitkumar2004gupta@gmail.com" class="footer__icon"
+          ><i class="bx bxl-gmail"></i
+        ></a>
+        <a href="tel:+919113150885"" class="footer__icon"
+          ><i class="bx bxs-phone-call"></i
+        ></a>
+      </div>
+      <p class="footer__copy">&#169; Sumit Gupta. All rigths reserved</p>
+    </footer>
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+    <script>
+      var moon = document.getElementById("moon");
+      moon.onclick = function () {
+        document.body.classList.toggle("dark-mode");
+        if (document.body.classList.contains("dark-mode")) {
+          moon.className = "bx bxs-sun";
+        } else {
+          moon.className = "bx bxs-moon";
+        }
+      };
+    </script>
+  </body>
 </html>
