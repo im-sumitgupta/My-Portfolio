@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Assignment Generator App</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #252326;
+      }
+
+      header {
+        background-color: #9421c9;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #fff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+      }
+
+      .button {
+        padding: 10px 20px;
+        margin: 20px;
+        background-color: #4d0e6b;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+      }
+
+      .button:hover {
+        background-color: #150b15e9;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-gap: 30px;
+        margin: 20px;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 60px;
+      }
+
+      @media (max-width: 768px) {
+        .gallery {
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+      }
+
+      .image {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .image img {
+        width: 100%;
+        height: auto;
+      }
+
+      .image:hover {
+        transform: translateY(-5px);
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .image:hover .overlay {
+        opacity: 1;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 3;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        overflow: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 80%;
+        max-height: 80%;
+      }
+
+      .close {
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .prev,
+      .next {
+        background-color: #ae24ed;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        margin: 10px;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        position: absolute;
+        bottom: 10px;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+
+      .prev:hover,
+      .next:hover {
+        background-color: #72139e;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>WordProcessor</h1>
+      <a href="#" class="button">Watch Video</a>
+    </header>
+
+    <div class="gallery">
+      <div class="image">
+        <img src="assets\img\AI App\i1.png" alt="Screenshot 1" />
+        <div class="overlay">View Image</div>
+      </div>
+      <div class="image">
+        <img src="assets\img\AI App\i2.png" alt="Screenshot 2" />
+        <div class="overlay">View Image</div>
+      </div>
+      <!-- Add more images here -->
+      <div class="image">
+        <img src="assets\img\AI App\i3.png" alt="Screenshot 3" />
+        <div class="overlay">View Image</div>
+      </div>
+      <div class="image">
+        <img src="assets\img\AI App\i4.png" alt="Screenshot 4" />
+        <div class="overlay">View Image</div>
+      </div>
+      <div class="image">
+        <img src="assets\img\AI App\i5.png" alt="Screenshot 5" />
+        <div class="overlay">View Image</div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal">
+      <span class="close" id="close">&times;</span>
+      <img class="modal-content" id="modal-image" />
+      <button class="prev" id="prev">Previous</button>
+      <button class="next" id="next">Next</button>
+    </div>
+
+    <script>
+      const images = document.querySelectorAll(".image");
+      const modal = document.getElementById("modal");
+      const modalImage = document.getElementById("modal-image");
+      const close = document.getElementById("close");
+      const prev = document.getElementById("prev");
+      const next = document.getElementById("next");
+
+      let currentImageIndex = 0;
+
+      images.forEach((image, index) => {
+        image.addEventListener("click", () => {
+          currentImageIndex = index;
+          updateModalImage();
+          modal.style.display = "flex";
+        });
+      });
+
+      close.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+
+      prev.addEventListener("click", () => {
+        currentImageIndex =
+          (currentImageIndex - 1 + images.length) % images.length;
+        updateModalImage();
+      });
+
+      next.addEventListener("click", () => {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        updateModalImage();
+      });
+
+      function updateModalImage() {
+        const imageUrl = images[currentImageIndex].querySelector("img").src;
+        modalImage.src = imageUrl;
+      }
+    </script>
+  </body>
+</html>
